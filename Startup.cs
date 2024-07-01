@@ -36,6 +36,7 @@ namespace TodoApi
                 }
             };
             var client = new SecretClient(new Uri("https://myKeyVault01072024v4.vault.azure.net/"), new DefaultAzureCredential(),options);
+            //var client = new SecretClient(new Uri("https://myKeyVault01072024v4.vault.azure.net/"), new DefaultAzureCredential(),options);
             
             KeyVaultSecret secret = client.GetSecret("AppSecret");
             
